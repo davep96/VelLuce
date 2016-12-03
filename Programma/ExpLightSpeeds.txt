@@ -1,0 +1,5 @@
+Exp Light Speeds 	 Errors 	 Relative Errors
+-nan	-nan	-nan
+-nan	-nan	-nan
+Light Speed 	 Error 	 Relative Error
+-nan	-nan	-nan
