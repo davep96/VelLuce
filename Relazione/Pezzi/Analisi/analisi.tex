@@ -1,0 +1,119 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[italian]{babel}
+
+\usepackage{graphicx}
+
+\usepackage{indentfirst}
+
+\usepackage{amsmath,amssymb}
+
+\usepackage{enumitem} 
+
+\newcommand{\virgolette}[1]{``#1''}
+
+\usepackage[margin=1in]{geometry} %Smaller margins
+
+\usepackage{lmodern} %Vector PDF
+
+\usepackage{siunitx}
+
+\usepackage{xcolor}
+
+\usepackage{colortbl}
+
+\usepackage{multirow}
+
+\usepackage{rotating}
+
+\usepackage{booktabs}
+
+\usepackage{longtable}
+
+\usepackage{graphicx}
+\graphicspath{ {../../Immagini/} }
+
+\usepackage{wrapfig}
+
+\usepackage{siunitx} % Per unità di misura in generale e la corretta rappresentazione dei numeri.
+
+\usepackage{gensymb} % Per il simbolo di gradi
+
+
+\begin{document}
+	
+	\section{Analisi e presentazione dei dati}
+	Veniamo ora all'analisi dei dati raccolti. Questa operazione si è svolta in quattro fasi:
+	
+	\begin{enumerate}
+		\item Estrazione di c per ogni misura.
+		\item Verifica compatibilità dei dati per ogni set.
+		\item Stima di c per ogni set di dati.
+		\item Verifica compatibilità dei set e media.
+	\end{enumerate}
+	
+	Inoltre le prime due parti dell'analisi dei dati sono state ripetute tre volte, una per ogni set di dati. 
+	\subsection{Premesse generale dell'analisi dei dati}
+	Nel corso dell'analisi dati ci sono state alcune linee guida seguite per cercare di ottenere il migliore risultato possibile con il minor numero di dati possibili. Poichè erano disponibili diversi dati con diversi errori (per motivi spiegati poi in seguito) questo fine si è ottenuto in primo luogo attraverso l'operazione di media pesata dei dati. Questa statistica è stata preferita alla semplice media in quanto privilegia misure con errore minore senza tuttavia scartare completamente misure con errori più grandi.
+	Inoltre l'errore è stato diviso in due parti: \emph{errore sistematico} ed \emph{errore statistico} o \emph{casuale}.
+	\subsubsection{Errore sistematico}
+	Per \emph{errore sistematico} si intende un errore nella misura di osservabili utilizzate per ricavare i dati in tutte le misure. In particolare nel ricavare le misure di c sono state usate ripetutamente le misure di, $ D $, la distanza dello specchio rotante dallo specchio concavo, $ a $, la distanza della lente $ 2 $ dallo specchio rotante e $ f_2 $ la distanza focale dello specchio 2. Un errore di misura su una di queste osservabili avrebbe portato ad un errore sistematicamente ripetuto in tutti i calcoli. È stato necessario quindi avere una buona stima dell'errore di queste osservabili. \\
+	\begin{wraptable}{r} {0.5 \textwidth}
+		\centering
+		\vspace{-1cm}
+		\caption{Misura di $D$}
+		\vspace{0.1 cm}
+		\begin{tabular}{lrrr}
+			\rowcolor[rgb]{ .741,  .843,  .933} \multicolumn{1}{r}{} & \multicolumn{1}{l}{Misura (\si{\meter})} & \multicolumn{1}{l}{Errore (\si{\meter})} & \multicolumn{1}{l}{Err. rel.} \\
+			\rowcolor[rgb]{ .741,  .843,  .933} $ D_1 $    & \cellcolor[rgb]{ .859,  .859,  .859} 6.3 & \cellcolor[rgb]{ .859,  .859,  .859} 0.04 & \cellcolor[rgb]{ .859,  .859,  .859} 0.006 \\
+			\rowcolor[rgb]{ .741,  .843,  .933} $ D_2 $    & \cellcolor[rgb]{ .929,  .929,  .929} 0.6 & \cellcolor[rgb]{ .929,  .929,  .929} 0.02 & \cellcolor[rgb]{ .929,  .929,  .929} 0.033 \\
+			\rowcolor[rgb]{ .741,  .843,  .933} $ D_3 $    & \cellcolor[rgb]{ .859,  .859,  .859} 6.53 & \cellcolor[rgb]{ .859,  .859,  .859} 0.04 & \cellcolor[rgb]{ .859,  .859,  .859} 0.006 \\ 
+			\rowcolor[rgb]{ .741,  .843,  .933} $ D $     & \cellcolor[rgb]{ .929,  .929,  .929} 13.43 & \cellcolor[rgb]{ .929,  .929,  .929} 0.35 & \cellcolor[rgb]{ .929,  .929,  .929} 0.026 \\
+		\end{tabular}%
+		\label{tab:D}
+	\end{wraptable}%
+	L'errore su $ D $ è stato il più complicato da misurare. Questa osservabile è stata di per se calcolata a partire da altre 3 osservabili che ai fini del testo chiameremo $ D_1,\ D_2 $ e $ D_3 $. In particolare $ D_1 $ è la distanza tra lo specchio rotante e il centro del primo specchio $ S_1 $, $ D_2 $ è la distanza tra il centro dello specchio $ S_1 $ e il secondo specchio $ S_2 $ e $ D_3 $ è la distanza tra lo specchio $ S_2 $ e lo specchio concavo. In questo modo si ha che:
+	\begin{equation}\label{eqn:D}
+		D = D_1 + D_2 + D_3 \quad \sigma_D = \sqrt{\sigma_{D_1}^2 + \sigma_{D_2}^2 + \sigma_{D_3}^2}
+	\end{equation}
+	
+	dove $ D $ e $ D_i, \ i=1,2,3 $ sono come prima e $ \sigma_D $ e $ \sigma_{D_i}, \ i=1,2,3 $ sono gli errori delle relative misure. L'errore di queste distanze derivava da molti fattori, in particolar modo causati dallo strumento di misura. Come descritto nelle sezioni precedenti queste misure sono state effettuate con il metro a nastro, con sensibilità al centimetro. La principale fonte di errore derivava dal fatto che il metro, sospeso in aria, si fletteva sotto al proprio peso modificando il valore letto. Un'altra fonte di errore è stata la non perfetta centratura del metro, dovuta anche al fatto che non era possibile toccare le superfici degli specchi.
+	Con queste considerazioni, si sono stimati, in base alla variabilità delle possibili misure sono riportati nella tabella \ref{tab:D}.
+	
+	\begin{wraptable}{l} {0.5 \textwidth}
+		\centering
+		\caption{Misura di $ a $}
+		\vspace{0.1cm}
+		\begin{tabular}{lrrr}
+			\rowcolor[rgb]{ .741,  .843,  .933}       & \multicolumn{1}{l}{Misura (\si{\meter})} & \multicolumn{1}{l}{Errore (\si{\meter})} & \multicolumn{1}{l}{Err. rel.} \\
+			\rowcolor[rgb]{ .741,  .843,  .933} $f_2$ & \cellcolor[rgb]{ .859,  .859,  .859} 0.252 & \cellcolor[rgb]{ .859,  .859,  .859} 0.001 & \cellcolor[rgb]{ .859,  .859,  .859} 0.004 \\
+			\rowcolor[rgb]{ .741,  .843,  .933} $s_{spr}$ & \cellcolor[rgb]{ .929,  .929,  .929} 0.865 & \cellcolor[rgb]{ .929,  .929,  .929} 0.005 & \cellcolor[rgb]{ .929,  .929,  .929} 0.006 \\
+			\rowcolor[rgb]{ .741,  .843,  .933} $a$   & \cellcolor[rgb]{ .859,  .859,  .859} 0.478 & \cellcolor[rgb]{ .859,  .859,  .859} 0.005 & \cellcolor[rgb]{ .859,  .859,  .859} 0.011 \\
+		\end{tabular}%
+		\label{tab:a}%
+	\end{wraptable}%
+	
+	
+	In confronto a $ D $, la stima dell'errore di $ a $ è stata più semplice. Come mostrato nelle figure \ref{photo 6} e \ref{photo 7}, sia la lente che lo specchio rotante si trovavano su una guida sulla quale era incollato un metro. Mentre la lente aveva un chiaro riferimento per la posizione (una piccola tacchetta bianca) lo specchio rotante no. Per questa ragione per lo specchio è stata aumentata l'incertezza di misura da $ \SI{1}{\milli\meter} $ a $ \SI{5}{\milli\meter} $. Quindi $ a $ è stata calcolata attraverso la seguente relazione:
+	\begin{equation}\label{eqn:a}
+		a = s_{spr} - s_{f_2} \quad \sigma_a = \sqrt{ \sigma_{s_{spr}}^2+\sigma_{s_{f_2}}^2}
+	\end{equation}
+	dove $ s_{spr} $ è la posizione dello specchio rotante, $ s_{f_2} $ è la posizione della lente 2 e le altre costanti sono i relativi errori. I valori misurati e i rispettivi errori sono presenti in tabella \ref{tab:a}.
+	
+	Non c'è stata una vera e propria misura di $ f_2 $ poichè questo valore era dato dal costruttore. Come errore è stato considerato un millesimo del valore. Quindi:
+	\[ 
+			f_2 = \SI{0.242}{\meter} \quad \sigma_{f_2}=\SI{0.242 e-4}{\meter}
+	\]
+	\subsubsection{Errore casuale}
+	Gli errori sopra citati non coprono tutti gli errori possibili nell'esperimento. In particolare non sono considerati gli errori su $ \Delta\delta $ ne quelli su $ \omega $ e $ \omega_0 $, costanti in riferimento alla formula \ref{eqn:c} che per semplicità di lettura copieremo un'altra volta qui.
+	\begin{equation*}
+		c = \dfrac{4 f_2 D^2 \left(\omega - \omega_0 \right)}{\left(D + a - f_2\right)\Delta\delta}
+	\end{equation*}
+	
+	Non essendo stimabili in modo rigoroso ed essendo idealmente casuali e quindi distribuiti normalmente, gli errori di questi osservabili sono stati raggruppati nella deviazione standard delle misure.
+	
+\end{document}
