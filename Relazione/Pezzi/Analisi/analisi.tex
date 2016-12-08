@@ -247,10 +247,50 @@
 		\includegraphics[width=.98\textwidth]{Clock-anticlockplot}
 		\label{fig:clock-anticlockplot}
 	\end{figure}
+	\newpage
 	\subsubsection{Verifica indipendenza}
 	Per la verifica dell'indipendenza dei dati si è usato il valore teorico della velocità della luce. In particolare un set di dati indipendenti avrebbe prodotto una distribuzione normale di valori della velocità della luce misurati centrati nel valore teorico e con deviazione standard uguale all'errore totale stimato. Per provare questa ipotesi si è usato il test del $ \chi^2 $. Come errore è stato usato lo stesso errore descritto nella sezione \ref{subsubsec:vercomp}. In tutti e tre i casi il test ha verificato l'ipotesi di indipendenza. A seguito di queste due operazioni è dunque lecito eseguire l'operazione di media pesata.
 	\subsection{Stima della velocità della luce per ogni set}
-	Come anticipato per la stima della velocità della luce è stata eseguita una media pesata 
+	Come anticipato per la stima della velocità della luce è stata eseguita una media pesata. Come peso si è scelto di usare l'errore sistematico. Questa scelta è stata fatta in quanto l'errore casuale è uguale per tutte le misure e non influenza l'operazione di media pesata. Inoltre era utile tenere separati gli errori sistematici da quelli casuali per osservare quale errore influisce di più sull'errore finale. L'errore totale per ogni valore ottenuto è stato trovato tramite la radice della somma in quadratura degli errori. I risultati di questa operazione sono riportati nella tabella \ref{tab:setc}.
+
+	\begin{table}[htbp]
+		\centering
+		\caption{Misure di $ c $ per ogni set}
+		\begin{tabular}{lllrlrlr}
+			\rowcolor[rgb]{ .741,  .843,  .933} Set   & $c$ (\si{\meter\per\second})   & $\sigma_{sist}$ (\si{\meter\per\second})& \multicolumn{1}{l}{$\sigma_{sist}$ rel.} & $\sigma_{rand}$ (\si{\meter\per\second}) & \multicolumn{1}{l}{$c_{rand}$ rel.} & $\sigma_c$ (\si{\meter\per\second}) & \multicolumn{1}{l}{$\sigma_c$ rel} \\
+			\rowcolor[rgb]{ .741,  .843,  .933} 1 & \cellcolor[rgb]{ .859,  .859,  .859} \num{2.98E+08} & \cellcolor[rgb]{ .859,  .859,  .859} \num{0.02E+08} & \cellcolor[rgb]{ .859,  .859,  .859} 0.006 & \cellcolor[rgb]{ .859,  .859,  .859} \num{0.02E+08} & \cellcolor[rgb]{ .859,  .859,  .859} 0.007 & \cellcolor[rgb]{ .859,  .859,  .859} \num{0.03E+08} & \cellcolor[rgb]{ .859,  .859,  .859} 0.009 \\
+			\rowcolor[rgb]{ .741,  .843,  .933} 2 & \cellcolor[rgb]{ .929,  .929,  .929} \num{3.08E+08} & \cellcolor[rgb]{ .929,  .929,  .929} \num{0.03E+08} & \cellcolor[rgb]{ .929,  .929,  .929} 0.008 & \cellcolor[rgb]{ .929,  .929,  .929} \num{0.04E+08} & \cellcolor[rgb]{ .929,  .929,  .929} 0.014 & \cellcolor[rgb]{ .929,  .929,  .929} \num{0.07E+08} & \cellcolor[rgb]{ .929,  .929,  .929} 0.022 \\
+			\rowcolor[rgb]{ .741,  .843,  .933} 3 & \cellcolor[rgb]{ .859,  .859,  .859} \num{2.98E+08} & \cellcolor[rgb]{ .859,  .859,  .859} \num{0.02E+08} & \cellcolor[rgb]{ .859,  .859,  .859} 0.008 & \cellcolor[rgb]{ .859,  .859,  .859} \num{0.01E+08} & \cellcolor[rgb]{ .859,  .859,  .859} 0.004 & \cellcolor[rgb]{ .859,  .859,  .859} \num{0.03E+08} & \cellcolor[rgb]{ .859,  .859,  .859} 0.009 \\
+		\end{tabular}%
+		\label{tab:setc}%
+	\end{table}%
+	È interessante notare come la presa dei dati abbia influito sull'errore. In particolare due cose hanno influito: la quantità di dati presi e il $ \Delta\omega $ considerato. A causa di un malfunzionamento del dispositivo di lettura delle frequenze infatti, abbiamo potuto prendere solo \num{10} misure per ognuno dei set 2 e 3, mentre per il primo 19. Inoltre il $ \Delta\omega $ per l'ultimo set era il maggiore come descritto in precedenza. Si può notare quindi che, il minor numero di misure ha causato un errore sistematico maggiore nei set 2 e 3 rispetto al primo. Questo perchè il processo di media pesata aiuta a ridurre l'errore tanti più sono le misure campionate. \\
+	Invece l'aver usato un $ \Delta\omega $ maggiore ha aiutato a diminuire notevolmente l'errore casuale nel terzo set. Quindi in futuro qualora si volesse diminuire l'errore sistematico è necessario compiere più misure, mentre qualora si volesse ridurre l'errore casuale è necessario campionare su $ \Delta\omega $ maggiori.
 	
+	\subsection{Verifica compatibilità dei set e media}
+	Ottenuti quindi i valori di $ c $ per ogni set come passaggio finale è stata fatta una media (ancora pesata ovviamente) per ottenere il valore finale di $ c $. Come pesi per la media sono stati usati gli errori totali. Come prima anche per questa media è stato necessario verificare la compatibilità e l'indipendenza dei dati raccolti. Che i dati fossero indipendenti è ovvio, in quanto provenienti da set di misura diversi. Per la compatibilità è stato usato lo stesso procedimento di prima che ha ovviamente confermato la compatibilità. Nella figura \ref{fig:setplot} sono presenti i valori calcolati per ogni set con i relativi errori.
+	
+	\begin{figure}
+		\centering
+		\caption{Velocità dei set}
+		\includegraphics[width=.98\textwidth]{setplot}
+		\label{fig:setplot}
+	\end{figure}
+	 
+	 Come valore finale di $c$ si è quindi ottenuto:
+	 % Table generated by Excel2LaTeX from sheet 'Sheet1'
+	 \begin{table}[htbp]
+	 	\centering
+	 	\caption{Valore finale di $ c $}
+	 	\vspace{0.1cm}
+	 	\begin{tabular}{llr}
+	 		\rowcolor[rgb]{ .741,  .843,  .933} $c$ (\si{\meter\per\second}) & $\sigma_c$ (\si{\meter\per\second}) & \multicolumn{1}{l}{Err. rel.} \\
+	 		\rowcolor[rgb]{ .859,  .859,  .859} \num{2.99E+08} & \num{0.02E+08} & 0.006 \\
+	 	\end{tabular}%
+	 	\label{tab:cfinal}%
+	 \end{table}%
+	 
+	 
+	 Valore pienamente compatibile con il risultato atteso.
 	
 	\end{document}
