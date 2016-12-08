@@ -206,10 +206,10 @@
 		\label{tab:couterclockclockdata}%
 	\end{table}%
 	\newpage
-	\subsection{Verifica compatibilità dei dati}
+	\subsection{Verifica bontà dei dati acquisiti}
 	A questo punto, prima di estrarre da ogni set la misura della velocità della luce è stato necessario verificare la compatibilità dei dati sotto alle ipotesi di errori effettuate e verificarne l'indipendenza. Tutti i controlli di indipendenza sono stati effettuati con un \emph{confidence level} del $ 95\% $ rispetto alla variabile standardizzata $ z $ di Gauss. 
 	
-	\subsubsection{Verifica compatibilità}
+	\subsubsection{Verifica compatibilità} \label{subsubsec:vercomp}
 	Per applicare correttamente l'operazione di media pesata è necessario verificare che i valori che si mediano siano compatibili, ossia derivino dalla stessa distribuzione. Come era facile aspettarsi, il controllo di compatibilità tra le misure dei set effettuato con solo l'errore sistematico (quello tabulato nelle tabelle \ref{tab:clockdata}, \ref{tab:counterclockdata} e \ref{tab:couterclockclockdata}). Per controllare la compatibilità era necessario aggiungere all'errore anche la componente casuale. Si è scelto, come prima stima dell'errore casuale, la deviazione standard delle misure di $ c $ del set. I valori delle deviazioni standard sono riportati in tabella \ref{tab:setdevstd}.
 	
 
@@ -224,29 +224,33 @@
 		\label{tab:setdevstd}%
 	\end{table}%
 	
-	Questa statistica è stata preferita rispetto alla deviazione standard della media in quanto ogni valore era preso da un campione solo di dati e non era frutto di alcuna medi: con questa operazione non si voleva verificare che i valori siano statisticamente uguali, ma che derivino da una stessa distribuzione. A causa della quantità di dati confrontati, e delle dimensioni occupate da una tabella che riporti tali valori, queste non saranno ricopiate. Con i dati sopra il lettore interessato può verificare che tutte le misure sono compatibili in questo modo. Sono però riportati nei grafici seguenti i valori misurati con gli errori ottenuti e, come confronto, la misura reale della velocità della luce.
+	Questa statistica è stata preferita rispetto alla deviazione standard della media in quanto ogni valore era preso da un campione solo di dati e non era frutto di alcuna medi: con questa operazione non si voleva verificare che i valori siano statisticamente uguali, ma che derivino da una stessa distribuzione. A causa della quantità di dati confrontati, e delle dimensioni occupate da una tabella che riporti tali valori, queste non saranno ricopiate. Con i dati sopra il lettore interessato può verificare che tutte le misure sono compatibili in questo modo. Sono però riportati nelle figure \ref{fig:clockwiseplot}, \ref{fig:counterclockwiseplot} e \ref{fig:clock-anticlockplot} seguenti i valori misurati con gli errori ottenuti e, come confronto, la misura reale della velocità della luce.
 	
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
 		\caption{\emph{Clockwise} data set}
 		\includegraphics[width=.98\textwidth]{Clockwiseplot}
+		\label{fig:clockwiseplot}
 	\end{figure}
 	
 
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
 		\caption{\emph{Counterclockwise} data set}
 		\includegraphics[width=.98\textwidth]{Counterclockwiseplot}
+		\label{fig:counterclockwiseplot}
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
 		\caption{\emph{Counterclock-clockwise} data set}
 		\includegraphics[width=.98\textwidth]{Clock-anticlockplot}
+		\label{fig:clock-anticlockplot}
 	\end{figure}
-	
-
-	
+	\subsubsection{Verifica indipendenza}
+	Per la verifica dell'indipendenza dei dati si è usato il valore teorico della velocità della luce. In particolare un set di dati indipendenti avrebbe prodotto una distribuzione normale di valori della velocità della luce misurati centrati nel valore teorico e con deviazione standard uguale all'errore totale stimato. Per provare questa ipotesi si è usato il test del $ \chi^2 $. Come errore è stato usato lo stesso errore descritto nella sezione \ref{subsubsec:vercomp}. In tutti e tre i casi il test ha verificato l'ipotesi di indipendenza. A seguito di queste due operazioni è dunque lecito eseguire l'operazione di media pesata.
+	\subsection{Stima della velocità della luce per ogni set}
+	Come anticipato per la stima della velocità della luce è stata eseguita una media pesata 
 	
 	
 	\end{document}
