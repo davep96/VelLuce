@@ -83,7 +83,7 @@
 	È stato quindi necessario avere una buona stima dell'errore di queste osservabili. \\
 	
 	\subsubsection{Errore casuale}
-	Gli errori sopra citati non coprono tutti quelli possibili nell'esperimento. In particolare non sono considerati gli errori su $ \Delta\delta $ ne quelli su $ \omega $ e $ \omega_0 $.	Non essendo questi stimabili in modo rigoroso ed essendo idealmente casuali e quindi distribuiti normalmente, gli errori di questi osservabili sono stati raggruppati nella deviazione standard delle misure.
+	Gli errori sopra citati non coprono tutti quelli possibili nell'esperimento. In particolare non sono considerati gli errori su $ \Delta\delta $ ne quelli su $ \omega $ e $ \omega_0 $.	Non essendo questi stimabili in modo rigoroso ed essendo questi distribuiti normalmente, gli errori di questi osservabili sono stati raggruppati nella deviazione standard delle misure.
 	
 	\subsection{Stima delle distanze}\label{sec:dist}
 	
@@ -132,7 +132,7 @@
 	
 	Non c'è stata una vera e propria misura di $ f_2 $ poiché questo valore era dato dal costruttore. Come errore è stato considerato un millesimo del valore. Quindi:
 	\[ 
-	f_2 = \SI{0.242}{\meter} \quad \sigma_{f_2}=\SI{0.242 e-4}{\meter}
+	f_2 = \SI{0.252}{\meter} \quad \sigma_{f_2}=\SI{0.252 e-4}{\meter}
 	\]
 	\subsection{Estrazione della velocità per ogni misura}
 	Come anticipato nel corso dell'esperimento sono stati effettuati tre set di misura: uno facendo ruotare lo specchio in senso orario (set \emph{clockwise}), uno in senso antiorario (set \emph{counterclockwise}) e uno facendolo partire in senso antiorario e finendo in senso orario (set \emph{counterclock-clock}). Per ogni misura si sono quindi campionati i valori di $ \nu,\, \nu_0$ (che attraverso la relazione $ \omega=2\pi\nu $ si sono convertiti rispettivamente in $ \omega $ e $ \omega_0 $ ), $\delta_1, $ e $ \delta_2 $. Il valore di $ \Delta\delta $ è stato calcolato come differenza di $ \delta_1 $ e $ \delta_2 $. Il valore di $ c $ per ogni misura è stato calcolato tramite la formula \ref{eqn:c} e i valori ricavati nella sezione \ref{sec:dist}. Sono di seguito riportate le misure campionate, con i relativi valori di $ c $ e gli errori sistematici.\footnote{Per la tabella \ref{tab:couterclockclockdata}, è stata usata una convenzione per cui frequenze di rotazioni antiorarie sono state considerate negative.}
@@ -210,7 +210,7 @@
 	A questo punto, prima di estrarre da ogni set la misura della velocità della luce è stato necessario verificare la compatibilità dei dati sotto alle ipotesi di errori effettuate e verificarne l'indipendenza. Tutti i controlli di indipendenza sono stati effettuati con un \emph{confidence level} del $ 95\% $ rispetto alla variabile standardizzata $ z $ di Gauss. 
 	
 	\subsubsection{Verifica compatibilità} \label{subsubsec:vercomp}
-	Per applicare correttamente l'operazione di media pesata è necessario verificare che i valori che si mediano siano compatibili, ossia derivino dalla stessa distribuzione. Come era facile aspettarsi, il controllo di compatibilità tra le misure dei set effettuato con solo l'errore sistematico (quello tabulato nelle tabelle \ref{tab:clockdata}, \ref{tab:counterclockdata} e \ref{tab:couterclockclockdata}). Per controllare la compatibilità era necessario aggiungere all'errore anche la componente casuale. Si è scelto, come prima stima dell'errore casuale, la deviazione standard delle misure di $ c $ del set. I valori delle deviazioni standard sono riportati in tabella \ref{tab:setdevstd}.
+	Per applicare correttamente l'operazione di media pesata è necessario verificare che i valori che si mediano siano compatibili, ossia derivino dalla stessa distribuzione. Come era facile aspettarsi, il controllo di compatibilità tra le misure dei set effettuato con solo l'errore sistematico (quello tabulato nelle tabelle \ref{tab:clockdata}, \ref{tab:counterclockdata} e \ref{tab:couterclockclockdata}) ha mostrato una incompatibilità su quasi tutti i dati. Per controllare la compatibilità era necessario aggiungere all'errore anche la componente casuale. Si è scelto, come prima stima dell'errore casuale, la deviazione standard delle misure di $ c $ del set. I valori delle deviazioni standard sono riportati in tabella \ref{tab:setdevstd}.
 	
 
 	\begin{table}[htbp]
@@ -251,7 +251,7 @@
 	\subsubsection{Verifica indipendenza}
 	Per la verifica dell'indipendenza dei dati si è usato il valore teorico della velocità della luce. In particolare un set di dati indipendenti avrebbe prodotto una distribuzione normale di valori della velocità della luce misurati centrati nel valore teorico e con deviazione standard uguale all'errore totale stimato. Per provare questa ipotesi si è usato il test del $ \chi^2 $. Come errore è stato usato lo stesso errore descritto nella sezione \ref{subsubsec:vercomp}. In tutti e tre i casi il test ha verificato l'ipotesi di indipendenza. A seguito di queste due operazioni è dunque lecito eseguire l'operazione di media pesata.
 	\subsection{Stima della velocità della luce per ogni set}
-	Come anticipato per la stima della velocità della luce è stata eseguita una media pesata. Come peso si è scelto di usare l'errore sistematico. Questa scelta è stata fatta in quanto l'errore casuale è uguale per tutte le misure e non influenza l'operazione di media pesata. Inoltre era utile tenere separati gli errori sistematici da quelli casuali per osservare quale errore influisce di più sull'errore finale. L'errore totale per ogni valore ottenuto è stato trovato tramite la radice della somma in quadratura degli errori. I risultati di questa operazione sono riportati nella tabella \ref{tab:setc}.
+	Come anticipato per la stima della velocità della luce è stata eseguita una media pesata. Come peso si è scelto di usare l'errore sistematico. Questa scelta è stata fatta in quanto l'errore casuale è uguale per tutte le misure e per tenere separati gli errori sistematici e quelli casuali. Inoltre era utile tenere separati gli errori sistematici da quelli casuali per osservare quale errore influisce di più sull'errore finale. L'errore totale per ogni valore ottenuto è stato trovato tramite la radice della somma in quadratura degli errori. I risultati di questa operazione sono riportati nella tabella \ref{tab:setc}.
 
 	\begin{table}[htbp]
 		\centering
